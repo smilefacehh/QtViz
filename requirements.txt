@@ -1,4 +1,3 @@
 PyQt5
 PyQtChart
 PyQt5-tools
-pyqt5-dev-tools
