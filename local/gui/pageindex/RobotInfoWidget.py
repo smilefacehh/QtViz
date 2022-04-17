@@ -55,8 +55,6 @@ class RobotInfoWidget(QtWidgets.QWidget):
         crash_widget = ShowListWidget("崩溃列表", crash_data)
         scroll_layout.addWidget(crash_widget)
         
-        # 任务操作
-
         scroll_layout.addStretch()
         scroll.setWidget(scroll_content)
 
