@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '../resources/main.ui'
+# Form implementation generated from reading ui file '../resources/original.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -44,6 +44,9 @@ class Ui_MainWindow(object):
         self.tab4 = QtWidgets.QWidget()
         self.tab4.setObjectName("tab4")
         self.tabWidget.addTab(self.tab4, "")
+        self.tab5 = QtWidgets.QWidget()
+        self.tab5.setObjectName("tab5")
+        self.tabWidget.addTab(self.tab5, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 28))
@@ -54,13 +57,14 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "机器人可视化"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "QtViz"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab1), _translate("MainWindow", "总览"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab2), _translate("MainWindow", "曲线"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab3), _translate("MainWindow", "感知"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab4), _translate("MainWindow", "定位"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab3), _translate("MainWindow", "工具"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab4), _translate("MainWindow", "感知"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab5), _translate("MainWindow", "定位"))

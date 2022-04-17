@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>机器人可视化</string>
+   <string>QtViz</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -45,7 +45,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab1">
      <attribute name="title">
@@ -59,10 +59,15 @@
     </widget>
     <widget class="QWidget" name="tab3">
      <attribute name="title">
-      <string>感知</string>
+      <string>工具</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tab4">
+     <attribute name="title">
+      <string>感知</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab5">
      <attribute name="title">
       <string>定位</string>
      </attribute>
