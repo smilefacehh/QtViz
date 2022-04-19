@@ -2,6 +2,7 @@
 # 性能展示
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from gui.pageindex.MapWidget import MapWidget
 
 class AllMapWidget(QtWidgets.QWidget):
     """地图展示
@@ -25,7 +26,14 @@ class AllMapWidget(QtWidgets.QWidget):
         scroll_content = QtWidgets.QWidget(scroll)
         scroll_layout = QtWidgets.QVBoxLayout(scroll_content)
         scroll_content.setLayout(scroll_layout)
+        scroll_layout.setSpacing(10)
 
+        self.planning_map = MapWidget()
+        self.localization_map = MapWidget()
+        self.perception_map = MapWidget()
+        scroll_layout.addWidget(self.planning_map)
+        scroll_layout.addWidget(self.localization_map)
+        scroll_layout.addWidget(self.perception_map)
 
         scroll_layout.addStretch()
         scroll.setWidget(scroll_content)

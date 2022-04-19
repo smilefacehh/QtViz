@@ -2,6 +2,7 @@
 # 感知地图
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from gui.pageindex.MapWidget import MapWidget
 
 
 class PerceptionMapWidget(QtWidgets.QWidget):
@@ -17,7 +18,7 @@ class PerceptionMapWidget(QtWidgets.QWidget):
         self.setStyleSheet(
             "QWidget#PerceptionMapWidget{"
                 "background-color: #EEEEEE;"
-                # "border: 1px solid #AAAAAA;"
+                "border: 1px solid #AAAAAA;"
             "}"
         )
         
@@ -25,5 +26,5 @@ class PerceptionMapWidget(QtWidgets.QWidget):
         layout = QtWidgets.QHBoxLayout(self)
         self.setLayout(layout)
 
-        self.label = QtWidgets.QLabel("感知地图")
-        layout.addWidget(self.label)
+        self.map = MapWidget()
+        layout.addWidget(self.map)

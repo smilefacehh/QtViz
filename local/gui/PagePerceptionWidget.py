@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from gui.pageperception.BaseInfoWidget import BaseInfoWidget
 from gui.pageperception.PerceptionMapWidget import PerceptionMapWidget
 from gui.pageperception.PerceptionResultWidget import PerceptionResultWidget
-
+from gui.pageperception.PerceptionReportWidget import PerceptionReportWidget
 
 class PagePerceptionWidget(QtWidgets.QWidget):
     """感知控件
@@ -36,6 +36,9 @@ class PagePerceptionWidget(QtWidgets.QWidget):
 
         self.perception_map_widget = PerceptionMapWidget()
         left_widget_layout.addWidget(self.perception_map_widget, 1)
+
+        self.report_widget = PerceptionReportWidget()
+        left_widget_layout.addWidget(self.report_widget, 1)
 
         layout.addWidget(left_widget, 1)
 
