@@ -2,7 +2,7 @@
 # 结果曲线
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from gui.pageindex.LineChart import LineChart
+from gui.common.LineChart import LineChart
 
 class LocalizationResultWidget(QtWidgets.QWidget):
     """结果曲线

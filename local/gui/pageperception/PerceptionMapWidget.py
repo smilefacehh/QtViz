@@ -2,7 +2,7 @@
 # 感知地图
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from gui.pageindex.MapWidget import MapWidget
+from gui.common.MapWidget import MapWidget
 
 
 class PerceptionMapWidget(QtWidgets.QWidget):

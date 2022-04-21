@@ -3,7 +3,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from gui.pageindex.ProfilerPieWidget import ProfilerPieWidget
-from gui.pageindex.LineChart import LineChart
+from gui.common.LineChart import LineChart
 
 class ProfilerWidget(QtWidgets.QWidget):
     """性能展示

@@ -4,7 +4,7 @@
 from colorsys import TWO_THIRD
 from PyQt5 import QtCore, QtGui, QtWidgets, QtChart
 from gui.pageindex.ShowListWidget import ShowListWidget
-from gui.pageindex.PieChart import PieChart
+from gui.common.PieChart import PieChart
 
 class ProfilerPieWidget(QtWidgets.QWidget):
     """性能展示，饼图
