@@ -5,9 +5,10 @@ import os
 import re
 import uuid
 import socket 
-from util.Util import str2int
+import ping3
+from util.util import str2int
 
-def host_ip():
+def host_ip() -> str:
     """本机ip
     """
     try:
@@ -20,14 +21,14 @@ def host_ip():
     return ip
 
 
-def host_mac():
+def host_mac() -> str:
     """本机mac地址
     """
     mac = uuid.UUID(int = uuid.getnode()).hex[-12:]
     return ":".join([mac[e:e+2] for e in range(0,11,2)])
 
 
-def lan_devices():
+def lan_devices() -> dict:
     """局域网设备ip、mac字典
     """
     devices = {}
@@ -50,7 +51,7 @@ def lan_devices():
     return devices
 
 
-def valid_ip(ip):
+def valid_ip(ip) -> bool:
     """判断是否有效ip
     """
     ip_arr = ip.split('.')
@@ -65,3 +66,8 @@ def valid_ip(ip):
             return False
 
     return True
+
+
+def ping(ip) -> float:
+    """网络延迟"""
+    return ping3.ping(ip, timeout=1)

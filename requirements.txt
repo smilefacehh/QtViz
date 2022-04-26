@@ -4,3 +4,4 @@ PyQt5-tools
 numpy
 pyyaml
 rospkg
+ping3
