@@ -4,7 +4,7 @@
 import os
 import re
 
-def adb_connected(ip):
+def adb_connected(ip: str) -> bool:
     """测试设备是否通过adb连接上了
 
     Returns:
@@ -14,7 +14,7 @@ def adb_connected(ip):
     return True if ip in ret else False
 
 
-def adb_connect(ip):
+def adb_connect(ip: str) -> bool:
     """通过adb连接设备
     
     Returns:
@@ -26,13 +26,13 @@ def adb_connect(ip):
     return False
 
 
-def adb_disconnect(ip):
+def adb_disconnect(ip: str) -> None:
     """释放adb连接
     """
     os.popen('adb disconnect %s' % ip)
 
 
-def adb_login():
+def adb_login() -> bool:
     """adb登录"""
     ret = os.popen('adb shell').read()
     if 'error' in ret:
@@ -40,7 +40,7 @@ def adb_login():
     return True
 
 
-def adb_pull(from_path, to_path):
+def adb_pull(from_path: str, to_path: str) -> bool:
     """通过adb拉取文件
 
     Args:
@@ -62,7 +62,7 @@ def adb_pull(from_path, to_path):
     return True
 
 
-def adb_push(from_path, to_path):
+def adb_push(from_path: str, to_path: str) -> bool:
     """通过adb推送文件
 
     Args:

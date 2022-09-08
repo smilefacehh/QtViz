@@ -2,3 +2,6 @@ PyQt5
 PyQtChart
 PyQt5-tools
 numpy
+pyyaml
+rospkg
+ping3
